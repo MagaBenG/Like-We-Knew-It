@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Main {
-
+	
 	public static void main(String args[]) {
 				
 		final JFrame launcherFrame = new JFrame();
@@ -67,6 +67,8 @@ public class Main {
 		gameFrame.setVisible(false);
 		gameFrame.getContentPane().setBackground(Color.WHITE);
 		
+		
+		
 		 Start.addActionListener(new ActionListener() {
 			  
 	            public void actionPerformed(ActionEvent e)
@@ -74,7 +76,7 @@ public class Main {
 	              launcherFrame.setVisible(false);
 	              
 	              gameFrame.setVisible(true);
-	            }
+	            }      
 	        });      
 		
 		launcherFrame.getContentPane().add(Options);
@@ -94,13 +96,14 @@ public class Main {
 		launcherFrame.getContentPane().add(UserName);
 		UserName.setVisible(true);
 		UserName.setHorizontalAlignment(JTextField.CENTER);	
-
 		
 		JPanel player = new JPanel();
 		player.setSize(20,20);
 		player.setForeground(Color.RED);
 		player.setVisible(true);
 		gameFrame.add(player);
-	 
+		
 	}  
+	
 }
+	
