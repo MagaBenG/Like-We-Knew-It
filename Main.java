@@ -1,9 +1,11 @@
 package LikeWeKnewIt;
 
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -66,8 +68,8 @@ public class Main {
 		gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		gameFrame.setVisible(false);
 		gameFrame.getContentPane().setBackground(Color.WHITE);
-		
-		
+
+
 		
 		 Start.addActionListener(new ActionListener() {
 			  
@@ -96,12 +98,6 @@ public class Main {
 		launcherFrame.getContentPane().add(UserName);
 		UserName.setVisible(true);
 		UserName.setHorizontalAlignment(JTextField.CENTER);	
-		
-		JPanel player = new JPanel();
-		player.setSize(20,20);
-		player.setForeground(Color.RED);
-		player.setVisible(true);
-		gameFrame.add(player);
 		
 	}  
 	
