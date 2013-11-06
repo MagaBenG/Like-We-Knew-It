@@ -1,6 +1,7 @@
 package LikeWeKnewIt;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -12,6 +13,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -98,6 +100,11 @@ public class Main {
 		launcherFrame.getContentPane().add(UserName);
 		UserName.setVisible(true);
 		UserName.setHorizontalAlignment(JTextField.CENTER);	
+		
+	//Component Red = new ImageIcon("Images/Red.png");
+	
+	//gameFrame.getContentPane().add(Red);
+		
 		
 	}  
 	
