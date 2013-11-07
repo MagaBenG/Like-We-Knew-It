@@ -62,6 +62,8 @@ public class Main {
 		launcherFrame.getContentPane().add(Start);
 		Start.setVisible(true);
 		
+	
+		
 		final JFrame gameFrame = new JFrame();
 		String gameTitle = "Like We Knew It";
 		
@@ -71,7 +73,15 @@ public class Main {
 		gameFrame.setVisible(false);
 		gameFrame.getContentPane().setBackground(Color.WHITE);
 
-
+		JButton Button_One = new JButton();
+		Button_One.setPreferredSize(new Dimension(100,100));
+		Button_One.setLocation(100,200);
+		Button_One.setVisible(true);
+		
+		
+		 
+		JPanel MainPanel = new JPanel();
+	     MainPanel.add(Button_One);
 		
 		 Start.addActionListener(new ActionListener() {
 			  
@@ -101,11 +111,8 @@ public class Main {
 		UserName.setVisible(true);
 		UserName.setHorizontalAlignment(JTextField.CENTER);	
 		
-		JButton One = new JButton();
-		One.setSize(new Dimension(200,200));
-		One.setLocation(320,200);
-		One.setVisible(true);
-		gameFrame.getContentPane().add(One);
+		gameFrame.getContentPane().add(MainPanel);
+		MainPanel.setBackground(Color.LIGHT_GRAY);
 		
 	}  
 	
