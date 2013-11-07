@@ -101,10 +101,11 @@ public class Main {
 		UserName.setVisible(true);
 		UserName.setHorizontalAlignment(JTextField.CENTER);	
 		
-	//Component Red = new ImageIcon("Images/Red.png");
-	
-	//gameFrame.getContentPane().add(Red);
-		
+		JButton One = new JButton();
+		One.setSize(new Dimension(200,200));
+		One.setLocation(320,200);
+		One.setVisible(true);
+		gameFrame.getContentPane().add(One);
 		
 	}  
 	
