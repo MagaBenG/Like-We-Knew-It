@@ -73,15 +73,26 @@ public class Main {
 		gameFrame.setVisible(false);
 		gameFrame.getContentPane().setBackground(Color.WHITE);
 
-		JButton Button_One = new JButton();
+		JButton Button_One = new JButton("ONE");
 		Button_One.setPreferredSize(new Dimension(100,100));
 		Button_One.setLocation(100,200);
 		Button_One.setVisible(true);
 		
+		JButton Button_Two = new JButton("TWO");
+		Button_Two.setPreferredSize(new Dimension(100,100));
+		Button_Two.setLocation(100, 300);
+		Button_Two.setVisible(true);
 		
-		 
+		JButton Button_Three = new JButton("Three");
+		Button_Three.setPreferredSize(new Dimension(100,100));
+		Button_Three.setLocation(100,500);
+		Button_Three.setVisible(true);
+		
 		JPanel MainPanel = new JPanel();
 	     MainPanel.add(Button_One);
+	     MainPanel.add(Button_Two);
+	     MainPanel.add(Button_Three);
+	     
 		
 		 Start.addActionListener(new ActionListener() {
 			  
@@ -112,7 +123,7 @@ public class Main {
 		UserName.setHorizontalAlignment(JTextField.CENTER);	
 		
 		gameFrame.getContentPane().add(MainPanel);
-		MainPanel.setBackground(Color.LIGHT_GRAY);
+		MainPanel.setBackground(Color.DARK_GRAY);
 		
 	}  
 	
