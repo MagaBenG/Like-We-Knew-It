@@ -13,6 +13,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.AbstractAction;
+import javax.swing.Action;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -20,11 +22,15 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.KeyStroke;
 
 public class Main {
+
 	
 	public static void main(String args[]) {
-				
+			
+		
+		
 		final JFrame launcherFrame = new JFrame();
 		String launcherTitle = "Like We Knew It";
 	
@@ -88,12 +94,41 @@ public class Main {
 		Button_Three.setLocation(100,500);
 		Button_Three.setVisible(true);
 		
-		JPanel MainPanel = new JPanel();
+		final JPanel MainPanel = new JPanel();
 	     MainPanel.add(Button_One);
 	     MainPanel.add(Button_Two);
 	     MainPanel.add(Button_Three);
 	     
-		
+	  
+	     
+	     Button_One.addActionListener(new ActionListener() {
+			  
+	            public void actionPerformed(ActionEvent e)
+	            {
+	            MainPanel.setBackground(Color.MAGENTA);
+	            }      
+	        });      
+	     
+	     Button_Two.addActionListener(new ActionListener() {
+			  
+	            public void actionPerformed(ActionEvent e)
+	            {
+	            MainPanel.setBackground(Color.BLUE);
+	            }      
+	        });    
+	     
+	     Button_Three.addActionListener(new ActionListener() {
+			  
+	            public void actionPerformed(ActionEvent e)
+	            {
+	            MainPanel.setBackground(Color.CYAN);
+	            }      
+	        }); 
+	     
+	     MainPanel.getInputMap().put(KeyStroke.getKeyStroke("G"),
+                 "Change");
+	     
+	     
 		 Start.addActionListener(new ActionListener() {
 			  
 	            public void actionPerformed(ActionEvent e)
@@ -125,7 +160,13 @@ public class Main {
 		gameFrame.getContentPane().add(MainPanel);
 		MainPanel.setBackground(Color.DARK_GRAY);
 		
+	 
+		
 	}  
 	
-}
+
+	
+	}
+	
+
 	
