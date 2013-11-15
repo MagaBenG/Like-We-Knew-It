@@ -32,6 +32,8 @@ import javax.swing.KeyStroke;
 public class Main {
 	public static void main(String args[]) {
 			
+
+		
 		int Score = 100;
 		
 		final JFrame launcherFrame = new JFrame();
@@ -84,10 +86,15 @@ public class Main {
 		gameFrame.setVisible(false);
 		gameFrame.getContentPane().setBackground(Color.WHITE);
 
-		final JButton Button_One = new JButton("ONE");
+		final JButton Button_One = new JButton("");
 		Button_One.setPreferredSize(new Dimension(100,100));
 		Button_One.setLocation(100,200);
 		Button_One.setVisible(true);
+		ImageIcon icon_One = new ImageIcon("images/Red.png");
+		Button_One.setIcon(icon_One);
+		Button_One.setDisabledIcon(icon_One); // or a grayed-out version
+		
+		// working on http://docs.oracle.com/javase/tutorial/uiswing/components/button.html
 		
 		final JButton Button_Two = new JButton("TWO");
 		Button_Two.setPreferredSize(new Dimension(100,100));
