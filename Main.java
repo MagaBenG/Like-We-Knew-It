@@ -7,12 +7,17 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.ImageIcon;
@@ -26,6 +31,7 @@ import javax.swing.KeyStroke;
 
 public class Main {
 
+	
 	
 	public static void main(String args[]) {
 			
@@ -68,7 +74,9 @@ public class Main {
 		launcherFrame.getContentPane().add(Start);
 		Start.setVisible(true);
 		
+	Image image;
 	
+	image = Toolkit.getDefaultToolkit().getImage("Red.png");
 		
 		final JFrame gameFrame = new JFrame();
 		String gameTitle = "Like We Knew It";
@@ -98,8 +106,8 @@ public class Main {
 	     MainPanel.add(Button_One);
 	     MainPanel.add(Button_Two);
 	     MainPanel.add(Button_Three);
-	     
-	  
+	   
+	
 	     
 	     Button_One.addActionListener(new ActionListener() {
 			  
@@ -122,6 +130,7 @@ public class Main {
 	            public void actionPerformed(ActionEvent e)
 	            {
 	            MainPanel.setBackground(Color.CYAN);
+	       
 	            }      
 	        }); 
 	     
