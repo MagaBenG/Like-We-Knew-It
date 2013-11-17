@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -31,8 +32,9 @@ import javax.swing.KeyStroke;
 
 public class Main {
 	public static void main(String args[]) {
-			
-		int Score = 100;
+		
+		ImageIcon Image_One = new ImageIcon("/Red.png");
+		ImageIcon Image_Two = new ImageIcon("/Blue.png");
 		
 		final JFrame launcherFrame = new JFrame();
 		String launcherTitle = "Like We Knew It";
@@ -80,18 +82,20 @@ public class Main {
 		gameFrame.setVisible(false);
 		gameFrame.getContentPane().setBackground(Color.WHITE);
 
-		final JButton Button_One = new JButton("ONE");
+		String Score = "100";
+		
+		final JLabel ScoreNumber = new JLabel(Score);
+		ScoreNumber.setFont(new Font("Serif",Font.ITALIC,36));
+		ScoreNumber.setForeground(Color.WHITE);
+		
+		final JButton Button_One = new JButton(Image_One);
 		Button_One.setPreferredSize(new Dimension(100,100));
 		Button_One.setLocation(100,200);
 		Button_One.setVisible(true);
-		ImageIcon icon_One = new ImageIcon("Images/Red.png");
-		Button_One.setIcon(icon_One);
-		Button_One.setDisabledIcon(icon_One); // or a grayed-out version
 		
-		final JButton Button_Two = new JButton("TWO");
+		final JButton Button_Two = new JButton(Image_Two);
 		Button_Two.setPreferredSize(new Dimension(100,100));
 		Button_Two.setLocation(100, 300);
-		Button_Two.setVisible(true);
 		
 		final JButton Button_Three = new JButton("THREE");
 		Button_Three.setPreferredSize(new Dimension(100,100));
@@ -99,9 +103,11 @@ public class Main {
 		Button_Three.setVisible(true);
 	
 		final JPanel MainPanel = new JPanel();
+		 MainPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
 	     MainPanel.add(Button_One);
 	     MainPanel.add(Button_Two);
 	     MainPanel.add(Button_Three);
+	     MainPanel.add(ScoreNumber);
 	     
 	     Button_One.addActionListener(new ActionListener() {
 			  
