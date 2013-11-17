@@ -32,8 +32,6 @@ import javax.swing.KeyStroke;
 public class Main {
 	public static void main(String args[]) {
 			
-
-		
 		int Score = 100;
 		
 		final JFrame launcherFrame = new JFrame();
@@ -73,10 +71,6 @@ public class Main {
 		launcherFrame.getContentPane().add(Start);
 		Start.setVisible(true);
 		
-	Image image;
-	
-	image = Toolkit.getDefaultToolkit().getImage("Red.png");
-		
 		final JFrame gameFrame = new JFrame();
 		String gameTitle = "Like We Knew It";
 		
@@ -86,22 +80,20 @@ public class Main {
 		gameFrame.setVisible(false);
 		gameFrame.getContentPane().setBackground(Color.WHITE);
 
-		final JButton Button_One = new JButton("");
+		final JButton Button_One = new JButton("ONE");
 		Button_One.setPreferredSize(new Dimension(100,100));
 		Button_One.setLocation(100,200);
 		Button_One.setVisible(true);
-		ImageIcon icon_One = new ImageIcon("images/Red.png");
+		ImageIcon icon_One = new ImageIcon("Images/Red.png");
 		Button_One.setIcon(icon_One);
 		Button_One.setDisabledIcon(icon_One); // or a grayed-out version
-		
-		// working on http://docs.oracle.com/javase/tutorial/uiswing/components/button.html
 		
 		final JButton Button_Two = new JButton("TWO");
 		Button_Two.setPreferredSize(new Dimension(100,100));
 		Button_Two.setLocation(100, 300);
 		Button_Two.setVisible(true);
 		
-		final JButton Button_Three = new JButton("Three");
+		final JButton Button_Three = new JButton("THREE");
 		Button_Three.setPreferredSize(new Dimension(100,100));
 		Button_Three.setLocation(100,500);
 		Button_Three.setVisible(true);
