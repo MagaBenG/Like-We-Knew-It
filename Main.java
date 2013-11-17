@@ -82,22 +82,22 @@ public class Main {
 		gameFrame.setVisible(false);
 		gameFrame.getContentPane().setBackground(Color.WHITE);
 
-		String Score = "100";
+		final int Score = 0;
 		
-		final JLabel ScoreNumber = new JLabel(Score);
+		final JLabel ScoreNumber = new JLabel("" + Score);
 		ScoreNumber.setFont(new Font("Serif",Font.ITALIC,36));
 		ScoreNumber.setForeground(Color.WHITE);
 		
-		final JButton Button_One = new JButton(Image_One);
+		final JButton Button_One = new JButton("FIVE");
 		Button_One.setPreferredSize(new Dimension(100,100));
 		Button_One.setLocation(100,200);
 		Button_One.setVisible(true);
 		
-		final JButton Button_Two = new JButton(Image_Two);
+		final JButton Button_Two = new JButton("TEN");
 		Button_Two.setPreferredSize(new Dimension(100,100));
 		Button_Two.setLocation(100, 300);
 		
-		final JButton Button_Three = new JButton("THREE");
+		final JButton Button_Three = new JButton("FIFTY");
 		Button_Three.setPreferredSize(new Dimension(100,100));
 		Button_Three.setLocation(100,500);
 		Button_Three.setVisible(true);
@@ -114,7 +114,6 @@ public class Main {
 	            public void actionPerformed(ActionEvent e)
 	            {
 	            MainPanel.setBackground(Color.MAGENTA);
-	         
 	            }      
 	        });      
 	     
@@ -123,7 +122,6 @@ public class Main {
 	            public void actionPerformed(ActionEvent e)
 	            {
 	            MainPanel.setBackground(Color.BLUE);
-	           
 	            }      
 	        });    
 	     
@@ -132,7 +130,6 @@ public class Main {
 	            public void actionPerformed(ActionEvent e)
 	            {
 	            MainPanel.setBackground(Color.CYAN);
-	       
 	            }      
 	        }); 
 	     
